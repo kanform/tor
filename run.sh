@@ -4,7 +4,7 @@ tor&
 
 source torsocks on
 url="$(shuf -n 1 /usr/local/src/url-list)"
-echo "$(date '+%Y-%m-%d %H:%M:%S') Trying to wget ${url}"
+echo "$(date '+%Y-%m-%d %H:%M:%S') Trying to wget ${url} via $(wget -qO - https://api.ipify.org; echo)"
 
 wget -qO - ${url} >> /var/log/tor/request.log
 
