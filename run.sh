@@ -1,5 +1,7 @@
 #!/bin/bash
 
+systemctl daemon-reload
+systemctl enable tor
 systemctl start tor
 source torsocks on
 url="$(shuf -n 1 /usr/local/src/url-list)"
