@@ -27,3 +27,4 @@ spec:
       containers:
       - name: knf-tor
         image: kanform/kanform-tor:1.0
+        imagePullPolicy: Always
