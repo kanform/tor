@@ -1,6 +1,6 @@
 if [ -n "$(which docker)" ]
 then
-  docker version
+  docker version --version
 else
   echo no docker version was found
   exit -1
