@@ -5,4 +5,5 @@ COPY url-list /usr/local/src/
 COPY run.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/run.sh
 
-CMD ["run.sh"]
+#CMD ["run.sh"]
+CMD ["sleep","3600"]
