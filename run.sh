@@ -4,5 +4,5 @@
 url="$(shuf -n 1 /usr/local/src/url-list)"
 echo "$(date '+%Y-%m-%d %H:%M:%S') Trying to wget ${url}"
 nc -vzu 192.168.1.254 53
-torsocks wget -qO - ${url}; echo
+wget -qO - ${url}; echo
 
