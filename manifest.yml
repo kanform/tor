@@ -1,0 +1,29 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: knf-tor
+  labels:
+    owner: knf-tor
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: knf-tor
+  namespace: knf-tor
+  labels:
+    app: knf-tor
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: knf-tor
+  template:
+    metadata:
+      labels:
+        app: knf-tor
+    spec:
+      containers:
+      - name: knf-tor
+        image: kanform/kanform-tor:1.0

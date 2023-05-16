@@ -8,5 +8,8 @@ echo "$(date '+%Y-%m-%d %H:%M:%S') Trying to wget ${url}"
 
 wget -qO - ${url} >> /var/log/tor/request.log
 
-sleep 3600
+wait=${WAIT:-0}
+echo "$(date '+%Y-%m-%d %H:%M:%S') wait for $wait before ending"
+sleep $wait
 
+exit 0
